@@ -1,0 +1,79 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 4,
+
+  "modules-left": [
+    "clock"
+  ],
+
+  "modules-center": [
+    "niri/workspaces"
+  ],
+
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "custom/cpu_bar",
+    "custom/mem_bar"
+  ],
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%a %d %b}"
+  },
+
+  "niri/workspaces": {
+    "format": "{index}",
+    "format-focused": "[{index}]",
+    "on-click": "activate"
+  },
+
+  "network": {
+    "format-wifi": "{signalStrength}%",
+    "format-ethernet": "ETH",
+    "format-disconnected": "X",
+    "interval": 3
+  },
+
+  "bluetooth": {
+    "format": "BT",
+    "format-connected": "BT {num_connections}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-muted": "MUTE",
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t"
+  },
+
+  "custom/cpu_bar": {
+    "exec": "~/.config/waybar/scripts/cpu_bar.sh",
+    "interval": 3,
+    "tooltip": true
+  },
+
+  "custom/mem_bar": {
+    "exec": "~/.config/waybar/scripts/mem_bar.sh",
+    "interval": 5,
+    "tooltip": true
+  },
+
+  "battery": {
+    "interval": 10,
+    "format": "{capacity}%",
+    "format-charging": "{capacity}%",
+    "format-plugged": "{capacity}%",
+    "format-full": "{capacity}%",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  }
+}

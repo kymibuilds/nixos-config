@@ -1,0 +1,38 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 10px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#custom-cpu_bar,
+#custom-mem_bar {
+    color: #ffffff;
+    padding: 0 6px;
+}
+
+/* Simple text workspaces */
+#workspaces button {
+    color: rgba(255, 255, 255, 0.3);
+    padding: 0 2px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+}
+
+/* Dim secondary info */
+#network,
+#custom-cpu_bar,
+#custom-mem_bar {
+    color: rgba(255, 255, 255, 0.5);
+}
