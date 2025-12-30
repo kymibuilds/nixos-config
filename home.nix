@@ -15,6 +15,7 @@
     ./modules/services.nix
     ./modules/terminal.nix
     ./modules/webdev.nix
+    ./modules/cpp.nix
   ];
 
   # Enable selected modules
@@ -24,4 +25,5 @@
   modules.services.enable = false;  # currently empty, disable for now
   modules.terminal.enable = true;
   modules.webdev.enable = true;
+  modules.cpp.enable = true;
 }
